@@ -1,5 +1,5 @@
 {
-    "name": "opensearch-sink",
+    "name": "elasticsearch-sink",
     "config": {
         "connector.class": "io.confluent.connect.elasticsearch.ElasticsearchSinkConnector",
         "tasks.max": "1",
