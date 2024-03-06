@@ -62,18 +62,6 @@ How to run:
 docker compose -f docker-compose.yaml up --build -d
 ```
 
-```shell
-# Start Elasticsearch connector
-
-curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @es-sink.json
-```
-
-```shell
-# Start PostgreSQL connector
-
-curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @source.json
-```
-
 Check contents of the PostgreSQL database:
 
 ```shell
@@ -92,6 +80,18 @@ id  |        name        |                       description                    
  108 | jacket             | water resistent black wind breaker                      |    0.1
  109 | spare tire         | 24 inch spare tire                                      |   22.2
 (9 rows)
+```
+
+```shell
+# Start Elasticsearch connector
+
+curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @es-sink.json
+```
+
+```shell
+# Start PostgreSQL connector
+
+curl -i -X POST -H "Accept:application/json" -H  "Content-Type:application/json" http://localhost:8083/connectors/ -d @source.json
 ```
 
 Verify that Elasticsearch has the same content:
